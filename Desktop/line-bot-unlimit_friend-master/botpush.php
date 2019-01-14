@@ -8,12 +8,12 @@ $access_token = 'jvW9HuIGNPGjk0TGVxwwKBeF2aX80LA9jCym2oeAAvYiWDrdPfbGyhbKJnhwpQN
 
 $channelSecret = '18f6f43b4878c25781416428910fde5';
 // ID ที่ต้องการส่งไปหา
-$pushID = 'U8a5e108504e65cb116676451aa18b961';
+$pushID = 'U75d15ae94f3b55e545312107239c96c0';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('รักคนเขียนจังคะ');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('สวัสดีคุณพิชชาพร กินมื้อกลางวันให้อร่อยนะ');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
